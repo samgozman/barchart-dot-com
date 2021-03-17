@@ -1,0 +1,27 @@
+{
+  "name": "barchart-dot-com",
+  "version": "1.0.0",
+  "description": "Fetching data from the barchart.com",
+  "main": "index.js",
+  "scripts": {
+        "dev": "nodemon lib/quotes.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://samgozman@github.com/samgozman/barchart-dot-com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samgozman/barchart-dot-com/issues"
+  },
+  "homepage": "https://github.com/samgozman/barchart-dot-com#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "got": "^11.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
