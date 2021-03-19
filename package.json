@@ -4,7 +4,7 @@
   "description": "Fetching data from the barchart.com",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon lib/quotes.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
