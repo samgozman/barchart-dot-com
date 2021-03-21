@@ -6,7 +6,9 @@ const main = async () => {
     // console.log(await financials.income().annual('AAPL'))
     // console.log(await financials.income().quarterly('AAPL'))
     // console.log(await financials.cashFlow().annual('AAPL'))
-    console.log(await financials.cashFlow().quarterly('AAPL'))
+    // console.log(await financials.cashFlow().quarterly('AAPL'))
+    // console.log(await financials.balanceSheet().annual('AAPL'))
+    console.log(await financials.balanceSheet().quarterly('AAPL'))
 }
 
 main()
