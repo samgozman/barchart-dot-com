@@ -8,8 +8,6 @@ test('Should get stock response from barchart income-statement/annual', async ()
     // Assert that response is not error
     expect(stock.error).toBeUndefined()
 
-    // Check main features
-
     expect(stock.periods).toBe(5)
 
     // Assert that netIncome and ebitda is an array of numbers
@@ -19,13 +17,57 @@ test('Should get stock response from barchart income-statement/annual', async ()
     expect(stock.ebitda).toContainEqual(expect.any(Number))
 })
 
+test('Should get stock response from barchart cash-flow/annual', async () => {
+    let stock = await financials.cashFlow().annual('aapl')
+
+    // Assert that response is not error
+    expect(stock.error).toBeUndefined()
+
+    expect(stock.periods).toBe(5)
+
+    // Assert that basic properties are an arrays of numbers
+    expect(stock.cashFlowsFromOperatingActivities.total).toEqual(expect.any(Array))
+    expect(stock.cashFlowsFromOperatingActivities.total).toContainEqual(expect.any(Number))
+
+    expect(stock.cashFlowsFromInvestingActivities.total).toEqual(expect.any(Array))
+    expect(stock.cashFlowsFromInvestingActivities.total).toContainEqual(expect.any(Number))
+
+    expect(stock.cashFlowsFromFinancingActivities.total).toEqual(expect.any(Array))
+    expect(stock.cashFlowsFromFinancingActivities.total).toContainEqual(expect.any(Number))
+
+    expect(stock.freeCashFlow.freeFlow).toEqual(expect.any(Array))
+    expect(stock.freeCashFlow.freeFlow).toContainEqual(expect.any(Number))
+})
+
+test('Should get stock response from barchart balance-sheet/annual', async () => {
+    let stock = await financials.balanceSheet().annual('aapl')
+
+    // Assert that response is not error
+    expect(stock.error).toBeUndefined()
+
+    expect(stock.periods).toBe(5)
+
+    // Assert that basic properties are an arrays of numbers
+    expect(stock.assets.total).toEqual(expect.any(Array))
+    expect(stock.assets.total).toContainEqual(expect.any(Number))
+
+    expect(stock.liabilities.total).toEqual(expect.any(Array))
+    expect(stock.liabilities.total).toContainEqual(expect.any(Number))
+
+    expect(stock.shareholdersEquity.total).toEqual(expect.any(Array))
+    expect(stock.shareholdersEquity.total).toContainEqual(expect.any(Number))
+})
+
+
 test('Should get error on empty request', async () => {
     const finia = await financials.income().annual(''),
         finiq = await financials.income().quarterly(''),
         finca = await financials.cashFlow().annual(''),
         fincq = await financials.cashFlow().quarterly(''),
         finba = await financials.cashFlow().annual(''),
-        finbq = await financials.cashFlow().quarterly('')
+        finbq = await financials.cashFlow().quarterly(''),
+        finbsa = await financials.balanceSheet().annual(''),
+        finbsq = await financials.balanceSheet().quarterly('')
 
     expect(finia.error).toBeDefined()
     expect(finiq.error).toBeDefined()
@@ -33,4 +75,6 @@ test('Should get error on empty request', async () => {
     expect(fincq.error).toBeDefined()
     expect(finba.error).toBeDefined()
     expect(finbq.error).toBeDefined()
+    expect(finbsa.error).toBeDefined()
+    expect(finbsq.error).toBeDefined()
 })
