@@ -12,8 +12,12 @@
     "type": "git",
     "url": "git+https://samgozman@github.com/samgozman/barchart-dot-com.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "stocks",
+    "financial",
+    "barchart"
+  ],
+  "author": "Sam Gozman <sam@gozman.space>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samgozman/barchart-dot-com/issues"
