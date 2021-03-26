@@ -56,6 +56,9 @@ test('Should get stock response from barchart balance-sheet/annual', async () =>
 
     expect(stock.shareholdersEquity.total).toEqual(expect.any(Array))
     expect(stock.shareholdersEquity.total).toContainEqual(expect.any(Number))
+
+    expect(stock.totalLiabilitiesAndEquity).toEqual(expect.any(Array))
+    expect(stock.totalLiabilitiesAndEquity).toContainEqual(expect.any(Number))
 })
 
 
