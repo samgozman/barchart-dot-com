@@ -1,6 +1,7 @@
 # barchart-dot-com
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/samgozman/barchart-dot-com/barchart-dot-com%20Node.js)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/fb9a28f06d204b008206eab9ff169c3b)](https://www.codacy.com/gh/samgozman/barchart-dot-com/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=samgozman/barchart-dot-com&amp;utm_campaign=Badge_Grade)
 [![npm](https://img.shields.io/npm/v/barchart-dot-com)](https://www.npmjs.com/package/barchart-dot-com)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/barchart-dot-com)
 ![NPM](https://img.shields.io/npm/l/barchart-dot-com)
@@ -17,9 +18,12 @@ npm install barchart-dot-com
 
 ## Features
 
-Fetch stock shorts data from barchart-dot-com.com such as:
+Fetch stock data from barchart-dot-com.com such as:
 
-* Short intrest days to cover
+* Financial income
+* Financial Cash Flow
+* Financial Balance Sheet
+* Overview: last price, options, analytics etc.
 
 ## Usage
 
@@ -45,9 +49,9 @@ main()
 ```
 
 *Returns:*
-> [ 57411000000, 55256000000, 59531000000, 48351000000, 45687000000 ]
->
-> [ 77344000000, 76477000000, 81801000000, 71501000000, 70529000000 ]
+
+* [ 57411000000, 55256000000, 59531000000, 48351000000, 45687000000 ]
+* [ 77344000000, 76477000000, 81801000000, 71501000000, 70529000000 ]
 
 ### Financials: Cash Flow
 
@@ -65,7 +69,8 @@ main()
 ```
 
 *Returns:*
-> [ 35263000000, 73365000000, 54573000000, 39867000000, 28409000000 ]
+
+* [ 35263000000, 73365000000, 54573000000, 39867000000, 28409000000 ]
 
 ### Financials: Balance Sheet
 
@@ -85,11 +90,10 @@ main()
 ```
 
 *Returns:*
-> [ 323888000000, 338516000000, 365725000000, 375319000000, 321686000000 ]
->
-> [ 258549000000, 248028000000, 258578000000, 241272000000, 193437000000 ]
->
-> [ 323888000000, 338516000000, 365725000000, 375319000000, 321686000000 ]
+
+* [ 323888000000, 338516000000, 365725000000, 375319000000, 321686000000 ]
+* [ 258549000000, 248028000000, 258578000000, 241272000000, 193437000000 ]
+* [ 323888000000, 338516000000, 365725000000, 375319000000, 321686000000 ]
 
 ### Quotes: overview
 
@@ -110,13 +114,11 @@ main()
 ```
 
 *Returns:*
-> 'NASDAQ'
->
-> 120.09
->
-> 1.25
->
-> { opinion: 'Sell', power: 8 }
+
+* 'NASDAQ'
+* 120.09
+* 1.25
+* { opinion: 'Sell', power: 8 }
 
 ## Disclaimer
 
