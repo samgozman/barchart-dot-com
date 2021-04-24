@@ -3,7 +3,7 @@ const {
 } = require('..')
 
 test('Should get stock response from barchart income-statement/annual', async () => {
-    let stock = await financials.income().annual('aapl')
+    let stock = await financials.income('aapl').annual()
 
     // Assert that response is not error
     expect(stock.error).toBeUndefined()
@@ -18,10 +18,7 @@ test('Should get stock response from barchart income-statement/annual', async ()
 })
 
 test('Should get stock response from barchart cash-flow/annual', async () => {
-    let stock = await financials.cashFlow().annual('aapl')
-
-    // Assert that response is not error
-    expect(stock.error).toBeUndefined()
+    let stock = await financials.cashFlow('aapl').annual()
 
     expect(stock.periods).toBe(5)
 
@@ -40,10 +37,7 @@ test('Should get stock response from barchart cash-flow/annual', async () => {
 })
 
 test('Should get stock response from barchart balance-sheet/annual', async () => {
-    let stock = await financials.balanceSheet().annual('aapl')
-
-    // Assert that response is not error
-    expect(stock.error).toBeUndefined()
+    let stock = await financials.balanceSheet('aapl').annual()
 
     expect(stock.periods).toBe(5)
 
@@ -63,21 +57,17 @@ test('Should get stock response from barchart balance-sheet/annual', async () =>
 
 
 test('Should get error on empty request', async () => {
-    const finia = await financials.income().annual(''),
-        finiq = await financials.income().quarterly(''),
-        finca = await financials.cashFlow().annual(''),
-        fincq = await financials.cashFlow().quarterly(''),
-        finba = await financials.cashFlow().annual(''),
-        finbq = await financials.cashFlow().quarterly(''),
-        finbsa = await financials.balanceSheet().annual(''),
-        finbsq = await financials.balanceSheet().quarterly('')
+    const finia = await financials.income('').annual(),
+        finiq = await financials.income('').quarterly(),
+        finca = await financials.cashFlow('').annual(),
+        fincq = await financials.cashFlow('').quarterly(),
+        finbsa = await financials.balanceSheet('').annual(),
+        finbsq = await financials.balanceSheet('').quarterly()
 
     expect(finia.error).toBeDefined()
     expect(finiq.error).toBeDefined()
     expect(finca.error).toBeDefined()
     expect(fincq.error).toBeDefined()
-    expect(finba.error).toBeDefined()
-    expect(finbq.error).toBeDefined()
     expect(finbsa.error).toBeDefined()
     expect(finbsq.error).toBeDefined()
 })
