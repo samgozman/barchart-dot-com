@@ -55,7 +55,6 @@ test('Should get stock response from barchart balance-sheet/annual', async () =>
     expect(stock.totalLiabilitiesAndEquity).toContainEqual(expect.any(Number))
 })
 
-
 test('Should get error on empty request', async () => {
     const finia = await financials.income('').annual(),
         finiq = await financials.income('').quarterly(),

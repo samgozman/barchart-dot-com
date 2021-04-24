@@ -40,7 +40,7 @@ Annual or Quarterly Income Statements.
 const { financials } = require('barchart-dot-com')
 
 const main = async () => {
-  const stock = await financials.income().annual('aapl')
+  const stock = await financials.income('aapl').annual()
   console.log(stock.netIncome)
   console.log(stock.ebitda)
 }
@@ -61,7 +61,7 @@ The Cash Flow report is used to assess the quality of a company's income.
 const { financials } = require('barchart-dot-com')
 
 const main = async () => {
-  const stock = await financials.cashFlow().quarterly('aapl')
+  const stock = await financials.cashFlow('aapl').quarterly()
   console.log(stock.freeCashFlow.freeFlow)
 }
 
@@ -80,7 +80,7 @@ A Balance Sheet is a financial statement that summarizes a company's assets, lia
 const { financials } = require('barchart-dot-com')
 
 const main = async () => {
-  const stock = await financials.balanceSheet().annual('aapl')
+  const stock = await financials.balanceSheet('aapl').annual()
   console.log(stock.assets.total)
   console.log(stock.liabilities.total)
   console.log(stock.totalLiabilitiesAndEquity)
