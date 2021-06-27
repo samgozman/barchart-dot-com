@@ -1,6 +1,6 @@
 {
   "name": "barchart-dot-com",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fetching data from the barchart.com",
   "main": "index.js",
   "scripts": {
@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/samgozman/barchart-dot-com#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.5",
+    "cheerio": "^1.0.0-rc.10",
     "got": "^11.8.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.21",
-    "eslint": "^7.22.0",
-    "jest": "^27.0.1",
+    "@types/jest": "^26.0.23",
+    "eslint": "^7.29.0",
+    "jest": "^27.0.5",
     "nodemon": "^2.0.7"
   }
 }

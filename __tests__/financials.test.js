@@ -2,6 +2,8 @@ const {
     financials
 } = require('..')
 
+jest.setTimeout(15000)
+
 test('Should get stock response from barchart income-statement/annual', async () => {
     let stock = await financials.income('aapl').annual()
 

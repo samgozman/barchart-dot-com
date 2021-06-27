@@ -2,6 +2,8 @@ const {
     quotes
 } = require('..')
 
+jest.setTimeout(15000)
+
 test('Should get stock response from barchart/quotes/overview', async () => {
     let stock = await quotes.overview('AaPl')
 
