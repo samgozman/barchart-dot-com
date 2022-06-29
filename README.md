@@ -1,5 +1,7 @@
 # barchart-dot-com
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C1DI4VL)
+
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/samgozman/barchart-dot-com/barchart-dot-com%20Node.js)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/fb9a28f06d204b008206eab9ff169c3b)](https://www.codacy.com/gh/samgozman/barchart-dot-com/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=samgozman/barchart-dot-com&amp;utm_campaign=Badge_Grade)
 [![npm](https://img.shields.io/npm/v/barchart-dot-com)](https://www.npmjs.com/package/barchart-dot-com)
