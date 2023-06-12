@@ -14,6 +14,15 @@ test('Should get stock response from barchart/quotes/overview', async () => {
     expect(stock.ticker).toBe('AAPL')
     expect(stock.exchange).toBe('NASDAQ')
     expect(stock.name).toBe('Apple Inc')
+    expect(stock.overview).toBeDefined()
+    expect(stock.fundamentals).toBeDefined()
+    expect(stock.options).toBeDefined()
+    expect(stock.technicals).toBeDefined()
+    expect(stock.technicals.opinion).toBeDefined()
+    expect(stock.technicals.power).toBeDefined()
+    expect(stock.analytics).toBeDefined()
+    expect(stock.estimates).toBeDefined()
+    expect(stock.estimates.quarter).toBeDefined()
 })
 
 test('Should get error on empty request', async () => {
