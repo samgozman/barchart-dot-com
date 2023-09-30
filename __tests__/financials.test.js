@@ -5,7 +5,7 @@ const {
 jest.setTimeout(15000)
 
 test('Should get stock response from barchart income-statement/annual', async () => {
-    let stock = await financials.income('aapl').annual()
+    const stock = await financials.income('aapl').annual()
 
     // Assert that response is not error
     expect(stock.error).toBeUndefined()
@@ -20,7 +20,7 @@ test('Should get stock response from barchart income-statement/annual', async ()
 })
 
 test('Should get stock response from barchart cash-flow/annual', async () => {
-    let stock = await financials.cashFlow('aapl').annual()
+    const stock = await financials.cashFlow('aapl').annual()
 
     expect(stock.periods).toBe(5)
 
@@ -39,7 +39,7 @@ test('Should get stock response from barchart cash-flow/annual', async () => {
 })
 
 test('Should get stock response from barchart balance-sheet/annual', async () => {
-    let stock = await financials.balanceSheet('aapl').annual()
+    const stock = await financials.balanceSheet('aapl').annual()
 
     expect(stock.periods).toBe(5)
 
