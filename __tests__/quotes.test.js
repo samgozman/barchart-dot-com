@@ -5,7 +5,7 @@ const {
 jest.setTimeout(15000)
 
 test('Should get stock response from barchart/quotes/overview', async () => {
-    let stock = await quotes.overview('AaPl')
+    const stock = await quotes.overview('AaPl')
 
     // Assert that response is not error
     expect(stock.error).toBeUndefined()
@@ -26,11 +26,11 @@ test('Should get stock response from barchart/quotes/overview', async () => {
 })
 
 test('Should get error on empty request', async () => {
-    let stock = await quotes.overview('')
+    const stock = await quotes.overview('')
     expect(stock.error).toBeDefined()
 })
 
 test('Should get error on wrong ticker', async () => {
-    let stock = await quotes.overview('KEK')
+    const stock = await quotes.overview('KEK')
     expect(stock.error).toBeDefined()
 })
